@@ -33,7 +33,7 @@
 #include <DHT_U.h>
 
 
-#define DHTPIN 12
+#define DHTPIN 4            // your DHT11 signal pin in ESP8266
 #define DHTTYPE    DHT11
 
 char ssid[] = SECRET_SSID;   // your network SSID (name)
