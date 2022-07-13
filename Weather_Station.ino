@@ -33,7 +33,8 @@
 #include <DHT_U.h>
 
 
-#define DHTPIN 4            // your DHT11 signal pin in ESP8266
+// Refer to NodeMCU pinout diagram in README
+#define DHTPIN 2            // GPIO2 is equivalent to D4 in NodeMCU 
 #define DHTTYPE    DHT11
 
 char ssid[] = SECRET_SSID;   // your network SSID (name)
@@ -74,7 +75,7 @@ void loop() {
   }
 
 
-  // Get temperature event and print its value.
+  // Get temperature event
   sensors_event_t event;
   dht.temperature().getEvent(&event);
   if (isnan(event.temperature)) {
